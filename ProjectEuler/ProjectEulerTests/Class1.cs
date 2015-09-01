@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectEuler
+namespace ProjectEulerTests
 {
-    public interface IProblem
+    public class Class1
     {
-        string Title();
-        string Answer();
     }
 }

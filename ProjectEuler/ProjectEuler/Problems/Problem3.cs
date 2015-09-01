@@ -8,9 +8,14 @@ namespace ProjectEuler
 {
     public class Problem3 : IProblem
     {
+        public string Title()
+        {
+            return @"3. Largest prime factor";
+        }
+
         public string Answer()
         {
-            return @"3. Largest prime factor
+            return Title() + @"
 
 The prime factors of 13195 are 5, 7, 13 and 29.
 

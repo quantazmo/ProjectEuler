@@ -8,9 +8,13 @@ namespace ProjectEuler
 {
     public class Problem5 : IProblem
     {
+        public string Title()
+        {
+            return @"5. Smallest multiple";
+        }
         public string Answer()
         {
-            return @"5. Smallest multiple
+            return Title() + @"
 
 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 

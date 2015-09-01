@@ -10,30 +10,29 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
+            var problems = new List<IProblem>
+            {
+                new Problem1(),
+                new Problem2(),
+                new Problem3(),
+                new Problem4(),
+                new Problem5()
+            };
             do
             {
                 Console.Clear();
-                Console.WriteLine(@"Project Euler
-
-1. Multiples of 3 and 5
-2. Even Fibonacci numbers
-3. Largest prime factor
-4. Largest palindrome product
-5. Smallest multiple
-
-Enter problem:");
-                var response = Console.ReadLine();
+                Console.WriteLine("Project Euler\r\n");
+                foreach (var problem in problems)
+                {
+                    Console.WriteLine(problem.Title());
+                }
+                Console.WriteLine("\r\nEnter problem:");
+                int i = 0;
+                i = Int32.Parse(Console.ReadLine()) - 1;
                 Console.Clear();
+                
 
-                IProblem problem = null;
-
-                if (response == "1") problem = new Problem1();
-                else if (response == "2") problem = new Problem2();
-                else if (response == "3") problem = new Problem3();
-                else if (response == "4") problem = new Problem4();
-                else if (response == "5") problem = new Problem5();
-
-                Console.WriteLine(problem.Answer());
+                Console.WriteLine(problems[i].Answer());
 
                 while (!Console.KeyAvailable)
                 {
